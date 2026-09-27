@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="description" content="This Is My Portfolio" />
     <title>My Portfolio</title>
-
-
+    <link rel="stylesheet" href="style.css" id="myStyle" />
 </head>
 
 <body>
-    <h1>ساره</h1>
+    <h1>ســــاره</h1>
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -20,25 +19,25 @@
         </ul>
     </nav>
     <section id="hero">
-        <img src="images/profile.jpg.webp" alt="صورة شخصية لـ اسمك" width="150" />
-        <h2>ساره</h2>
+        <img src="images/susu.png" alt="صورة شخصية لساره" />
+        <h2>ســـاره</h2>
         <p>طالبة برمجة اتعلم تطوير الويب من الصفر، أبني موقعي الخاص .</p>
     </section>
 
     <section id="about">
-        <h2>عني</h2>
-        <p>أنا ساره، حالياً اتعلم تطوير الويب من الصفر. احب بناء أشياء بإيدي.</p>
+        <h2>عـنـي</h2>
+        <p>أنا ساره، حالياً اتعلم تطوير الويب من الصفر. ابني موقعي الشخصي.</p>
         <ul>
             <li>HTML</li>
             <li>CSS (جاري التعلم)</li>
         </ul>
     </section>
     <section id="projects">
-        <h2>مشاريعي</h2>
+        <h2>مشـاريعي</h2>
         <table>
             <tr>
                 <th>اسم المشروع</th>
-                <th>الوصف</th>
+                <th>الــوصف</th>
             </tr>
             <tr>
                 <td>صفحة تعريفية بسيطة</td>
@@ -52,7 +51,7 @@
     </section>
 
     <section id="skills">
-        <h2>مهاراتي</h2>
+        <h2>مـهـاراتي</h2>
         <table>
 
             <tr>
@@ -79,7 +78,7 @@
     </section>
 
     <section id="contact">
-        <h2>تواصل معي</h2>
+        <h2>تـواصـل معي</h2>
         <form>
             <label for="name">الاسم:</label>
             <input type="text" id="name" name="name" />
@@ -90,7 +89,7 @@
             <label for="message">الرسالة:</label>
             <textarea id="message" name="message"></textarea>
 
-            <button type="submit">إرسال</button>
+            <button type="submit">إرســال</button>
         </form>
     </section>
 
@@ -98,9 +97,25 @@
         <a href="https://github.com/SarahStars" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/sarah-alqadhi-298873291/" target="_blank"
             rel="noopener noreferrer">LinkedIn</a>
-        <p>© 2026 ساره. جميع الحقوق محفوظة.</p>
+        <p>© 2026 سـاره. جميع الحقوق محفوظة.</p>
+        <p style="font-size: 12px; margin-top: 10px;">
+            <a href="#" onclick="toggleStyle(); return false;" style="color: #999;">عرض  HTML فقط</a>
+        </p>
     </footer>
-
+    <script>
+        function toggleStyle() {
+            var style = document.getElementById("myStyle");
+            var link = document.querySelector("a[onclick*='toggleStyle']");
+            if (style.disabled) {
+                style.disabled = false;
+                link.textContent = "HTML  فقط";
+            } else {
+                style.disabled = true;
+                link.textContent = "HTML و CSS";
+            }
+        }
+    </script>
+</body>
 
 </body>
 
