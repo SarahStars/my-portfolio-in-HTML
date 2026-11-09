@@ -5,6 +5,7 @@
     --light-purple: #c9a0dc;
     --medium-purple: #b98cd1;
 }
+
 body {
     background-color: #eef8f4;
     color: #4a3f55;
@@ -60,6 +61,7 @@ nav a {
     font-size: 18px;
     transition: all 0.5s ease;
 }
+
 nav a:hover {
     color: #ffffff;
     background-color: #b98cd1;
@@ -78,6 +80,7 @@ section {
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(122, 79, 181, 0.12);
 }
+
 #hero {
     text-align: center;
 }
@@ -88,7 +91,7 @@ section {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
-   
+
 }
 
 /* الجداول */
@@ -102,14 +105,15 @@ table {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
+th,
+td {
     padding: 12px 16px;
-    text-align:center;
+    text-align: center;
     border-bottom: 1px solid #e6d1f0;
 }
 
 th {
-     background-color: #e9c6f9;
+    background-color: #e9c6f9;
     color: var(--dark-purple);
     font-size: 15px;
 }
@@ -138,6 +142,7 @@ label {
     text-align: right;
     font-weight: bold;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -145,7 +150,8 @@ form {
     margin: 0 auto;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
 
     padding: 10px 12px;
@@ -157,7 +163,8 @@ input, textarea {
     transition: border-color 0.3s ease;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     border-color: #7a4fb5;
     outline: none;
     box-shadow: 0 0 5px rgba(122, 79, 181, 0.3);
@@ -171,6 +178,7 @@ button {
     margin-top: 5px;
     transition: background-color 0.9s ease;
 }
+
 button:hover {
     background-color: #7a4fb5;
     cursor: pointer;
@@ -201,4 +209,118 @@ footer a:hover {
     background-color: var(--main-purple);
     transform: translateY(-2px);
     text-decoration: none;
+}
+
+/* زر الوضع الليلي */
+#themeBtn {
+    background: transparent;
+    font-size: 20px;
+    padding: 0 8px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* الوضع الليلي */
+body.dark {
+    background-color: #1e1b26;
+    color: #e6e0ee;
+}
+
+body.dark h1,
+body.dark h2 {
+    color: #c9a0dc;
+}
+
+body.dark nav {
+    background-color: #3a2f4f;
+}
+
+body.dark nav a {
+    color: #e6d1f0;
+}
+
+body.dark section {
+    background-color: #2a2535;
+    border-color: #3d3550;
+}
+
+body.dark th {
+    background-color: #4a3a63;
+    color: #ffffff;
+}
+
+body.dark td {
+    background-color: #2a2535;
+    color: #e6e0ee;
+    border-bottom-color: #3d3550;
+}
+
+body.dark tr:hover td {
+    background-color: #352d46;
+}
+
+body.dark input,
+body.dark textarea {
+    background-color: #1e1b26;
+    color: #ffffff;
+    border-color: #5a3d75;
+}
+
+body.dark footer {
+    background-color: #2a2535;
+}
+
+
+
+
+/* شريط مستوى المهارة */
+.bar {
+    background-color: #ecdcf5;
+    height: 8px;
+    border-radius: 10px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background-color: var(--main-purple);
+    border-radius: 10px;
+}
+
+body.dark .bar {
+    background-color: #3d3550;
+}
+
+body.dark .fill {
+    background-color: #c9a0dc;
+}
+
+
+
+
+/* رسائل النموذج */
+.error {
+    color: #c0392b;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.error:empty {
+    display: none;
+}
+
+.success {
+    color: #2e8b57;
+    font-weight: bold;
+    text-align: center;
+}
+
+body.dark .error {
+    color: #ff8a80;
+}
+
+body.dark .success {
+    color: #7ddc9f;
 }

@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="This Is My Portfolio" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" id="myStyle" />
+    <script type="module" src="main.js"></script>
 </head>
 
 <body>
@@ -16,80 +18,74 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><button id="themeBtn">🌙</button></li>
         </ul>
     </nav>
+
     <section id="hero">
         <img src="images/susu.png" alt="صورة شخصية لساره" />
         <h2>ســـاره</h2>
-        <p>طالبة برمجة اتعلم تطوير الويب من الصفر، أبني موقعي الخاص .</p>
+        <p>طالبة برمجة، أطوّر تطبيقات الموبايل (Flutter) وأتعلّم تطوير الويب.</p>
     </section>
 
-    <section id="about">
-        <h2>عـنـي</h2>
-        <p>أنا ساره، حالياً اتعلم تطوير الويب من الصفر. ابني موقعي الشخصي.</p>
-        <ul>
-            <li>HTML</li>
-            <li>CSS (جاري التعلم)</li>
-        </ul>
-    </section>
+<section id="about">
+    <h2>عـنـي</h2>
+    <p>
+        أنا ساره، طالبة برمجة أتعلّم تطوير الويب وتطبيقات الموبايل. لدي خبرة جيدة
+        بلغة (Dart) وإطار (Flutter)، وأطوّر حالياً مهاراتي بتطوير الويب عبر بناء
+        مشاريع عملية، وهذا الموقع أحدها. أستعد بعد ذلك لتعلّم (React).
+    </p>
+    <ul>
+        <li>Dart</li>
+        <li>Flutter</li>
+        <li>HTML</li>
+        <li>CSS (جاري التعلم)</li>
+        <li>JavaScript (جاري التعلم)</li>
+    </ul>
+</section>
     <section id="projects">
         <h2>مشـاريعي</h2>
         <table>
-            <tr>
-                <th>اسم المشروع</th>
-                <th>الــوصف</th>
-            </tr>
-            <tr>
-                <td>صفحة تعريفية بسيطة</td>
-                <td>أول صفحة HTML عملتها، فيها عناوين وفقرات وصور</td>
-            </tr>
-            <tr>
-                <td>قائمة مهام</td>
-                <td>صفحة فيها قائمة عناصر باستخدام ul وli</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>اسم المشروع</th>
+                    <th>الــوصف</th>
+                </tr>
+            </thead>
+            <tbody id="projectsBody"></tbody>
         </table>
     </section>
 
     <section id="skills">
         <h2>مـهـاراتي</h2>
         <table>
-
-            <tr>
-                <th>المهارة</th>
-                <th>المستوى</th>
-            </tr>
-            <tr>
-                <td>Dart</td>
-                <td>ممتاز</td>
-            </tr>
-            <tr>
-                <td>Flutter</td>
-                <td>ممتاز</td>
-            </tr>
-            <tr>
-                <td>HTML</td>
-                <td>جيد</td>
-            </tr>
-            <tr>
-                <td>CSS</td>
-                <td>مبتدئة</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>المهارة</th>
+                    <th>المستوى</th>
+                </tr>
+            </thead>
+            <tbody id="skillsBody"></tbody>
         </table>
     </section>
 
     <section id="contact">
         <h2>تـواصـل معي</h2>
-        <form>
+        <form id="contactForm" novalidate>
             <label for="name">الاسم:</label>
             <input type="text" id="name" name="name" />
+            <span class="error" id="nameError"></span>
 
             <label for="email">الإيميل:</label>
             <input type="email" id="email" name="email" />
+            <span class="error" id="emailError"></span>
 
             <label for="message">الرسالة:</label>
             <textarea id="message" name="message"></textarea>
+            <span class="error" id="messageError"></span>
 
             <button type="submit">إرســال</button>
+            <p class="success" id="formSuccess"></p>
         </form>
     </section>
 
@@ -99,24 +95,23 @@
             rel="noopener noreferrer">LinkedIn</a>
         <p>© 2026 سـاره. جميع الحقوق محفوظة.</p>
         <p style="font-size: 12px; margin-top: 10px;">
-            <a href="#" onclick="toggleStyle(); return false;" style="color: #999;">عرض  HTML فقط</a>
+            <a href="#" onclick="toggleStyle(); return false;" style="color: #999;">عرض HTML فقط</a>
         </p>
     </footer>
+
     <script>
         function toggleStyle() {
             var style = document.getElementById("myStyle");
             var link = document.querySelector("a[onclick*='toggleStyle']");
             if (style.disabled) {
                 style.disabled = false;
-                link.textContent = "HTML  فقط";
+                link.textContent = "عرض HTML فقط";
             } else {
                 style.disabled = true;
-                link.textContent = "HTML و CSS";
+                link.textContent = "عرض HTML و CSS";
             }
         }
     </script>
-</body>
-
 </body>
 
 </html>
